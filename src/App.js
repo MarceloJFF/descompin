@@ -1,11 +1,12 @@
 
-import { HomePage } from "./pages/HomePage";
+import { HomePage } from "./pages/Home/HomePage";
+import { HeaderPartial } from "./Partials/HeaderPartial/HeaderPartial";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <HeaderPartial></HeaderPartial>
         <HomePage></HomePage>
-      </header>
+      
     </div>
   );
 }
