@@ -2,32 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from '../../components/Card/Card'
-import Modal from '../../components/Modal/Modal'
+import ModalSavePin from '../../containers/ModalSavePin/ModalSavePin'
+import ModalCreateFolder from '../../containers/ModalCreateFolder/ModalCreateFolder';
+
 export const HomePage = () => {
     return (
         <div>
-            <Modal 
-            title="salvar pin" 
-            open={true}
-            controls = {[
-                {
-                    label: 'Criar Pastas',
-                    variant: 'secondary',
-                    onClick:()=>{
-                        console.log("clicou")
-                    }
-                },
-                {
-                    label: 'Fechar',
-                    variant: 'primary',
-                    onClick:()=>{
-                        console.log("clicou em fechar")
-                    }
-                }
-            ]}
-            > 
-                <p>Olá</p>
-            </Modal>
+            <ModalCreateFolder open = {true}></ModalCreateFolder>
+            {/* <ModalSavePin open={true} /> */}
             <Container fluid>
                 <Row>
                     <Col xs={12} md={3}>

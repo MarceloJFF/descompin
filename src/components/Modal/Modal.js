@@ -9,13 +9,15 @@ const Modal = (props) => {
             <ModalBS.Header closeButton>
                 <ModalBS.Title>{props.title}</ModalBS.Title>
             </ModalBS.Header>
-            <ModalBS.Body>{props.children}</ModalBS.Body>
+            <ModalBS.Body>{props.children}
+            </ModalBS.Body>
             <ModalBS.Footer>
                 {  
                     props.controls.map((control,controlIndex) => (
-                        <Button key={controlIndex} variant={control.variant} onClick={control.onClick} >
-                            {control.label}
-                        </Button>
+                        <Button 
+                        key={controlIndex} 
+                        {...control}
+                         />                        
                     ))
                     
                 }
