@@ -11,10 +11,12 @@ const ModalCreateFolder = ({ open }) => {
     console.log("Folder Name:", folderName); // Log the folder name entered by the user
     // You can perform further actions here, like creating and saving the folder.
   }
-
+  const handleChange =(e)=>{
+    setFolderName(e.target.value)
+}
   return (
     <Modal
-      open={open}
+      open={false}
       title="Criar pasta"
       controls={
         [
@@ -37,7 +39,7 @@ const ModalCreateFolder = ({ open }) => {
             type="text"
             placeholder="Ex: Matemática"
             value={folderName} // Bind the input field's value to the state
-            onChange={(e) => setFolderName(e.target.value)} // Update the state when the input changes
+            onChange={(e) => handleChange(e)} // Update the state when the input changes
           />
         </Form.Group>
       </Form>
